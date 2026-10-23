@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment 5 – Individual Work – Nazymkyzy Aizada</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Assignment 5 — Individual Work</h1>
+    <p>JavaScript Basics: DOM Manipulation &amp; Events (Tasks 6–10)</p>
+    <p class="student">Student: <strong>Nazymkyzy Aizada</strong> · Group: <strong>МТ-2504</strong> · 2nd year</p>
+    <nav aria-label="Task navigation">
+      <a href="#task6">Task 6</a>
+      <a href="#task7">Task 7</a>
+      <a href="#task8">Task 8</a>
+      <a href="#task9">Task 9</a>
+      <a href="#task10">Task 10</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= TASK 6 ================= -->
+    <section id="task6" class="task" aria-labelledby="task6-title">
+      <h2 id="task6-title">Task 6. A counter with click events</h2>
+      <p class="hint">Events: <code>click</code> on three buttons. One function <code>updateCounter()</code> renders the value.</p>
+
+      <p class="counter-label">Current value:</p>
+      <p id="counter-value" class="counter-value" aria-live="polite">0</p>
+
+      <div class="btn-row">
+        <button type="button" id="btn-increase" class="btn">Increase</button>
+        <button type="button" id="btn-decrease" class="btn">Decrease</button>
+        <button type="button" id="btn-reset" class="btn btn-secondary">Reset</button>
+      </div>
+      <p id="counter-msg" class="note" aria-live="polite"></p>
+    </section>
+
+    <!-- ================= TASK 7 ================= -->
+    <section id="task7" class="task" aria-labelledby="task7-title">
+      <h2 id="task7-title">Task 7. Live text preview</h2>
+      <p class="hint">Events: <code>input</code> on the text field, <code>click</code> on Clear.</p>
+
+      <label for="preview-input">Type or paste your text:</label>
+      <input type="text" id="preview-input" placeholder="Start typing…" autocomplete="off">
+
+      <p class="small-title">Preview:</p>
+      <p id="preview-text" class="preview empty">Your text will appear here</p>
+      <p class="note">Characters: <strong id="char-count">0</strong></p>
+
+      <button type="button" id="btn-clear" class="btn btn-secondary">Clear</button>
+    </section>
+
+    <!-- ================= TASK 8 ================= -->
+    <section id="task8" class="task" aria-labelledby="task8-title">
+      <h2 id="task8-title">Task 8. Change an image with a select control</h2>
+      <p class="hint">Event: <code>change</code> on the select. Updates <code>src</code>, <code>alt</code> and the caption.</p>
+
+      <label for="image-select">Choose a landscape:</label>
+      <select id="image-select">
+        <option value="mountains">Mountains at sunset</option>
+        <option value="sea">Sea and sailboat</option>
+        <option value="forest">Green forest</option>
+      </select>
+
+      <figure class="figure">
+        <img id="landscape-img" src="images/mountains.png" alt="Purple mountain ridges under an orange sunset sky" width="800" height="500">
+        <figcaption id="landscape-caption">Mountains at sunset</figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= TASK 9 ================= -->
+    <section id="task9" class="task" aria-labelledby="task9-title">
+      <h2 id="task9-title">Task 9. Keyboard events</h2>
+      <p class="hint">Event: <code>keydown</code> + <code>event.key</code>. Enter shows the text, Escape clears everything.</p>
+
+      <form id="key-form" novalidate>
+        <label for="key-input">Type here and press Enter or Escape:</label>
+        <input type="text" id="key-input" placeholder="Focus me and press keys" autocomplete="off">
+      </form>
+
+      <p id="key-status" class="status" aria-live="polite">Last key pressed: none yet</p>
+      <p class="small-title">Result (after Enter):</p>
+      <p id="key-result" class="preview empty" aria-live="polite">Nothing submitted yet</p>
+    </section>
+
+    <!-- ================= TASK 10 ================= -->
+    <section id="task10" class="task" aria-labelledby="task10-title">
+      <h2 id="task10-title">Task 10. Mouse and focus events</h2>
+      <p class="hint">Events: <code>mouseenter</code> / <code>mouseleave</code> and <code>focus</code> / <code>blur</code>.</p>
+
+      <div class="card-wrap">
+        <div id="focus-card" class="info-card" tabindex="0">Interactive card</div>
+        <p id="card-instruction" class="instruction">Hover over the card or press Tab to focus it.</p>
+      </div>
+
+      <h3>Which event triggers each change?</h3>
+      <ul class="explain">
+        <li><code>mouseenter</code> – the pointer enters the card: adds the <code>highlight</code> class and changes the instruction text.</li>
+        <li><code>mouseleave</code> – the pointer leaves the card: removes <code>highlight</code> and restores the original text.</li>
+        <li><code>focus</code> – the card receives keyboard focus (Tab): the same highlight and text as on hover.</li>
+        <li><code>blur</code> – the card loses focus: the highlight is removed and the original text is restored.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Nazymkyzy Aizada · МТ-2504 · Assignment 5 · Part 2</p>
+  </footer>
+</body>
+</html>
